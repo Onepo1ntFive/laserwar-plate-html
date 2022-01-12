@@ -1,0 +1,99 @@
+.l-wrap {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+
+    @media (min-width: $breakpoint-desktop) {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
+/*----------*/
+.l-header {
+    margin: auto;
+    max-width: 1700px;
+    width: 100%;
+
+    @media (min-width: $breakpoint-tablet) {
+    }
+    @media (min-width: $breakpoint-desktop) {
+    }
+}
+/*----------*/
+.l-content {
+    flex: 1 auto;
+    padding-bottom: 3rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-bottom: 5rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        padding-bottom: 10rem;
+    }
+
+    .content__wrap {
+        margin: auto;
+        max-width: 1700px;
+        width: 100%;
+    }
+    .content__cols {
+        margin-left: -3rem;
+        margin-right: -3rem;
+        display: flex;
+        flex-flow: row wrap;
+
+        @media (min-width: $breakpoint-desktop) {
+            flex-wrap: nowrap;
+        }
+    }
+    .content__col {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 3rem;
+        width: 100%;
+        
+        @media (min-width: $breakpoint-desktop) {
+            width: calc(100% - 42rem);
+
+            &--w400 {
+                flex-basis: 42rem;
+            }
+        }
+    }
+
+    &--main {
+        padding-bottom: 0;
+    }
+}
+/*----------*/
+.card {
+    margin: 0 auto 2rem;
+    padding: 2rem;
+    background-color: $color-white;
+    box-shadow: 0px 2px 15px rgba(38, 50, 56, 0.1);
+    border-radius: 3px;
+
+    @media (min-width: $breakpoint-tablet) {
+        max-width: 45rem;
+        padding: 3rem 3rem 4rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        max-width: none;
+    }
+
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
+}
+/*----------*/
+.l-footer {
+}
+/*----------*/
