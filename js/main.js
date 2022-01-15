@@ -1,37 +1,6 @@
 'use strict';
 "use strict";
 
-(function () {
-  var windowWidth = window.innerWidth;
-  var swiper = undefined;
-
-  function initGallery() {
-    windowWidth = window.innerWidth;
-
-    if (windowWidth >= 768 && swiper !== undefined) {
-      console.log('destroy');
-      swiper.destroy(false, true);
-      swiper = undefined;
-    } else if (windowWidth < 768 && swiper === undefined) {
-      console.log('init');
-      swiper = new Swiper('.swiper', {
-        spaceBetween: 100,
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-          clickable: true
-        }
-      });
-    }
-  }
-
-  initGallery();
-  window.addEventListener('resize', function (event) {
-    initGallery();
-  }, true);
-})();
-"use strict";
-
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
@@ -5402,4 +5371,35 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   }];
   return H.use(J), H;
 });
+"use strict";
+
+(function () {
+  var windowWidth = window.innerWidth;
+  var swiper = undefined;
+
+  function initGallery() {
+    windowWidth = window.innerWidth;
+
+    if (windowWidth >= 768 && swiper !== undefined) {
+      console.log('destroy');
+      swiper.destroy(false, true);
+      swiper = undefined;
+    } else if (windowWidth < 768 && swiper === undefined) {
+      console.log('init');
+      swiper = new Swiper('.swiper', {
+        spaceBetween: 100,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        }
+      });
+    }
+  }
+
+  initGallery();
+  window.addEventListener('resize', function (event) {
+    initGallery();
+  }, true);
+})();
 //# sourceMappingURL=maps/main.js.map

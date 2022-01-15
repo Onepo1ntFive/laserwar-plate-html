@@ -1750,4 +1750,34 @@ button.swiper-pagination-bullet {
       .gallery .swiper-slide img {
         height: 340px; } }
 
+.map {
+  position: relative; }
+  .map__map {
+    height: 600px; }
+  .map__inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    z-index: 1;
+    top: -30px;
+    left: 50%;
+    width: 100%;
+    max-width: 1110px;
+    transform: translateX(-50%); }
+  .map__content {
+    padding: 30px;
+    background-color: #00aa8a;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    line-height: 1.2;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #fff; }
+    @media (min-width: 768px) {
+      .map__content {
+        padding: 50px 70px; } }
+    .map__content img {
+      margin-bottom: 20px; }
+
 /*# sourceMappingURL=maps/main.css.map */
