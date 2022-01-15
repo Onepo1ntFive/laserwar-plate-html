@@ -1,0 +1,40 @@
+.map {
+    position: relative;
+
+    &__map {
+        height: 60rem;
+    }
+
+    &__inner {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        position: absolute;
+        z-index: 1;
+        top: -3rem;
+        left: 50%;
+        width: 100%;
+        max-width: 111rem;
+        transform: translateX(-50%);
+    }
+
+    &__content {
+        padding: 3rem;
+        background-color: $color-green;
+        width: 100%;
+        max-width: 40rem;
+        border-radius: 1.2rem;
+        line-height: 1.2;
+        font-size: 2rem;
+        font-weight: lighter;
+        color: $color-white;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding: 5rem 7rem;
+        }
+
+        img {
+            margin-bottom: 2rem;
+        }
+    }
+
+}

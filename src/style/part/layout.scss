@@ -1,6 +1,4 @@
 .l-wrap {
-    padding-left: 2rem;
-    padding-right: 2rem;
     width: 100%;
     min-height: 100%;
     position: relative;
@@ -9,9 +7,32 @@
     display: flex;
     flex-flow: column nowrap;
 
-    @media (min-width: $breakpoint-desktop) {
-        padding-left: 6rem;
-        padding-right: 6rem;
+    font-family: $font-family;
+    line-height: 1.5;
+    font-weight: normal;
+    font-size: 1.6rem;
+    color: $color-black;
+    -webkit-backface-visibility: hidden;
+    -webkit-text-size-adjust: 100%;
+    background-color: $color-lightgray;
+
+    h2 {
+        margin-bottom: 1em;
+        font-family: $font-family-russo;
+        font-size: 2rem;
+        line-height: 1.1;
+        color: $color-dark-gray;
+
+        @media (min-width: $breakpoint-tablet) {
+            font-size: 3.8rem;
+        }
+    }
+    h3 {
+        margin-bottom: 1em;
+        font-size: 2.2rem;
+        font-weight: 600;
+        line-height: 1.1;
+        color: $color-dark-gray;
     }
 }
 /*----------*/
@@ -38,8 +59,10 @@
     }
 
     .content__wrap {
+        padding-left: 2rem;
+        padding-right: 2rem;
         margin: auto;
-        max-width: 1700px;
+        max-width: 115rem;
         width: 100%;
     }
     .content__cols {

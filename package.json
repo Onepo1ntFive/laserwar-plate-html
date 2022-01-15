@@ -32,6 +32,7 @@
     "gulp-image-resize": "^0.13.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-minify-css": "^1.2.4",
+    "gulp-rem-to-px": "^1.0.1",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^2.6.5",

@@ -12,7 +12,8 @@ const gulp = require('gulp'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload,
     concat = require('gulp-concat'),
-    ghPages = require('gulp-gh-pages');
+    ghPages = require('gulp-gh-pages'),
+    remtopx = require('gulp-rem-to-px');
 
 const path = {
     build: { // пути для файлов после сборки
@@ -76,6 +77,7 @@ const styles = () => {
         // .pipe(sass({outputStyle: 'compressed'}))
         .pipe(sass())
         .pipe(sourcemaps.write('./maps'))
+        .pipe(remtopx({ fontSize: 10 }))
         .pipe(gulp.dest(path.build.style))
         .pipe(reload({ stream: true }));
 }
@@ -86,7 +88,7 @@ const scripts = () => {
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
         .pipe(sourcemaps.write('./maps'))

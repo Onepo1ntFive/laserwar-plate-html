@@ -1,0 +1,87 @@
+.gallery {
+    background-color: $color-white;
+    margin: 0 -300rem;
+    padding: 5rem 300rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        padding-top: 14rem;
+        padding-bottom: 14rem;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .swiper {
+        overflow: visible;
+        margin-bottom: 5rem;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: auto;
+        top: calc(100% + 2rem);
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .swiper-pagination-bullet {
+        width: 1.4rem;
+        height: 1.4rem;
+        background: #eeeff4;
+        box-shadow: inset 2px 1px 3px rgba(34, 5, 52, 0.33);
+    }
+
+    .swiper-pagination-bullet-active {
+        background: linear-gradient(154.27deg, #07ceaa 18.35%, #088c6d 91.63%);
+        box-shadow: -1px -1px 4px #ffffff, 1px 1px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .swiper-slide {
+        width: 33.33%;
+        text-align: center;
+
+        img {
+            max-width: 100%;
+            border-radius: 1.2rem;
+        }
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        .swiper-wrapper {
+            flex-flow: row wrap;
+        }
+        .swiper-slide {
+            padding: 0 1rem 2rem;
+            width: 33.33%;
+
+            @media (min-width: $breakpoint-desktop) {
+                padding: 0 1.5rem 3rem;
+            }
+
+            &--half {
+                width: 50%;
+            }
+
+            img {
+                width: 100%;
+                height: 20rem;
+                object-fit: cover;
+
+                @media (min-width: $breakpoint-desktop) {
+                    height: 34rem;
+                }
+            }
+        }
+    }
+}
