@@ -466,7 +466,7 @@ sup {
     font-size: 22px;
     font-weight: 600;
     line-height: 1.1;
-    color: #333; }
+    color: #828282; }
   .l-wrap a {
     color: #00aa8a;
     text-decoration: none;
@@ -1758,7 +1758,7 @@ button.swiper-pagination-bullet {
     top: -30px;
     left: 50%;
     width: 100%;
-    max-width: 1110px;
+    max-width: 960px;
     transform: translateX(-50%); }
   .map__content {
     padding: 30px;
@@ -1778,8 +1778,12 @@ button.swiper-pagination-bullet {
 
 .reviews {
   margin: 0 -3000px;
-  padding: 80px 3000px;
+  padding: 40px 3000px;
   background: linear-gradient(180deg, #daddea 0%, #eeeff4 110.53%); }
+  @media (min-width: 1200px) {
+    .reviews {
+      padding-top: 80px;
+      padding-bottom: 80px; } }
   .reviews h2 {
     text-align: center; }
   .reviews p {
@@ -1838,7 +1842,6 @@ button.swiper-pagination-bullet {
   .swiper-reviews .swiper-slide {
     padding: 30px;
     pointer-events: none;
-    opacity: 0;
     background: linear-gradient(153.11deg, #f1f2f6 -6.51%, #ffffff 121.86%);
     box-shadow: -2px -4px 7px rgba(251, 252, 255, 0.7), 4px 4px 5px rgba(187, 191, 205, 0.7);
     border-radius: 12px;
@@ -1847,10 +1850,13 @@ button.swiper-pagination-bullet {
     transition-timing-function: ease-in-out; }
     @media (min-width: 1200px) {
       .swiper-reviews .swiper-slide {
+        opacity: 0;
         padding: 40px 90px; } }
     .swiper-reviews .swiper-slide-active {
-      pointer-events: all;
-      opacity: 1; }
+      pointer-events: all; }
+      @media (min-width: 1200px) {
+        .swiper-reviews .swiper-slide-active {
+          opacity: 1; } }
   .swiper-reviews .swiper-button-next,
   .swiper-reviews .swiper-button-prev {
     margin-top: 0;
@@ -1903,5 +1909,156 @@ button.swiper-pagination-bullet {
     .swiper-reviews .swiper-button-prev.swiper-button-disabled {
       opacity: 1;
       background: url("../img/prev-disabled.svg") 50% 50% no-repeat, linear-gradient(153.11deg, #f1f2f6 -6.51%, #ffffff 121.86%); }
+
+.form {
+  margin: 0 -3000px;
+  padding: 50px 3000px;
+  background: linear-gradient(136.01deg, #ff6715 -16.14%, #ff222e 101.49%);
+  mix-blend-mode: normal; }
+  @media (min-width: 768px) {
+    .form {
+      padding-top: 100px;
+      padding-bottom: 100px; } }
+  @media (min-width: 1200px) {
+    .form {
+      padding-top: 140px;
+      padding-bottom: 140px; } }
+  .form label {
+    padding-bottom: 5px;
+    display: block;
+    width: 100%;
+    color: #828282;
+    cursor: pointer; }
+  .form input[type='text'],
+  .form input[type='tel'],
+  .form input[type='email'] {
+    padding: 10px;
+    display: block;
+    width: 100%;
+    border: 0;
+    background: #fff;
+    box-shadow: inset 2px 1px 3px rgba(34, 5, 52, 0.33);
+    border-radius: 7px; }
+  .form button {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 10px 30px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff; }
+    .form button::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(136.01deg, #ff6715 -16.14%, #ff222e 101.49%);
+      box-shadow: -3px -3px 7px #ffffff, 3px 3px 4px rgba(94, 100, 117, 0.5);
+      border-radius: 6px;
+      z-index: -1;
+      transition: opacity 0.2s ease-in-out; }
+    .form button::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, #ff222e, #ff222e);
+      border-radius: 6px;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out; }
+    .form button:hover::after {
+      opacity: 1; }
+  .form__inner {
+    margin: auto;
+    max-width: 920px;
+    padding: 30px;
+    background: linear-gradient(332.64deg, #e4e5ec -33.4%, #eeeff4 105.02%);
+    box-shadow: -3px -4px 4px rgba(255, 187, 187, 0.7), 4px 4px 6px rgba(153, 17, 7, 0.7);
+    border-radius: 12px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center; }
+    @media (min-width: 768px) {
+      .form__inner {
+        padding: 20px; } }
+  .form__form {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .form__form {
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 60%; } }
+    @media (min-width: 1200px) {
+      .form__form {
+        padding-left: 70px;
+        padding-right: 70px;
+        width: 70%; } }
+  .form__pic {
+    display: none; }
+    @media (min-width: 768px) {
+      .form__pic {
+        width: 40%;
+        display: block; } }
+    @media (min-width: 1200px) {
+      .form__pic {
+        width: 30%; } }
+    .form__pic img {
+      max-width: 100%; }
+  .form__item {
+    padding-bottom: 20px; }
+    .form__item:last-child {
+      padding-bottom: 0; }
+    .form__item--policy {
+      padding-top: 15px; }
+    .form__item--btn {
+      padding-top: 15px;
+      text-align: center; }
+      @media (min-width: 768px) {
+        .form__item--btn {
+          text-align: left; } }
+  .form__checkbox {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap; }
+    .form__checkbox > label {
+      padding-left: 10px; }
+    .form__checkbox-input input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0; }
+      .form__checkbox-input input:checked ~ label::before {
+        opacity: 1; }
+    .form__checkbox-input label {
+      position: relative;
+      display: block;
+      background: #fff;
+      box-shadow: inset 2px 1px 3px rgba(34, 5, 52, 0.33);
+      width: 24px;
+      height: 24px;
+      border-radius: 7px;
+      cursor: pointer; }
+      .form__checkbox-input label::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../img/check.svg") 50% 50% no-repeat;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out; }
 
 /*# sourceMappingURL=maps/main.css.map */

@@ -5406,7 +5406,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 (function () {
   if (!!document.querySelector('.swiper-reviews')) {
     var swiperReviews = new Swiper('.swiper-reviews', {
-      spaceBetween: 20,
+      spaceBetween: 40,
       loop: true,
       speed: 800,
       autoHeight: true,
