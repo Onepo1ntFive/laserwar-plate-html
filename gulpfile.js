@@ -85,9 +85,9 @@ const styles = () => {
 const scripts = () => {
     return gulp
         .src(path.src.js)
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
+        // .pipe(babel({
+        //     presets: ['@babel/env']
+        // }))
         // .pipe(uglify())
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
