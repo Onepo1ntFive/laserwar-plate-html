@@ -111,7 +111,7 @@ function clickHandler(e) {
         scrollTrigger: {
             toggleActions: "play pause resume reverse",
             trigger: ".benefits",
-            start: "-100 center",
+            start: "-50% center",
             end: "bottom top",
             scrub: false,
             pin: false,
