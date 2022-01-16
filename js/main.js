@@ -5374,32 +5374,48 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 "use strict";
 
 (function () {
-  var windowWidth = window.innerWidth;
-  var swiper = undefined;
+  if (!!document.querySelector('.swiper-gallery')) {
+    var initGallery = function initGallery() {
+      windowWidth = window.innerWidth;
 
-  function initGallery() {
-    windowWidth = window.innerWidth;
+      if (windowWidth >= 768 && swiperGallery !== undefined) {
+        swiperGallery.destroy(false, true);
+        swiperGallery = undefined;
+      } else if (windowWidth < 768 && swiperGallery === undefined) {
+        swiperGallery = new Swiper('.swiper-gallery', {
+          spaceBetween: 100,
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+          }
+        });
+      }
+    };
 
-    if (windowWidth >= 768 && swiper !== undefined) {
-      console.log('destroy');
-      swiper.destroy(false, true);
-      swiper = undefined;
-    } else if (windowWidth < 768 && swiper === undefined) {
-      console.log('init');
-      swiper = new Swiper('.swiper', {
-        spaceBetween: 100,
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-          clickable: true
-        }
-      });
-    }
-  }
-
-  initGallery();
-  window.addEventListener('resize', function (event) {
+    var windowWidth = window.innerWidth;
+    var swiperGallery = undefined;
     initGallery();
-  }, true);
+    window.addEventListener('resize', function () {
+      initGallery();
+    }, true);
+  }
+})();
+"use strict";
+
+(function () {
+  if (!!document.querySelector('.swiper-reviews')) {
+    var swiperReviews = new Swiper('.swiper-reviews', {
+      spaceBetween: 20,
+      loop: true,
+      speed: 800,
+      autoHeight: true,
+      watchSlidesProgress: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+  }
 })();
 //# sourceMappingURL=maps/main.js.map
