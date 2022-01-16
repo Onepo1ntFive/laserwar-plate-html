@@ -1,7 +1,7 @@
 (function () {
     if (!!document.querySelector('.swiper-reviews')) {
         const swiperReviews = new Swiper('.swiper-reviews', {
-            spaceBetween: 20,
+            spaceBetween: 40,
             loop: true,
             speed: 800,
             autoHeight: true,

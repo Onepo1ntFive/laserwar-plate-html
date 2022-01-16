@@ -1,7 +1,12 @@
 .reviews {
     margin: 0 -300rem;
-    padding: 8rem 300rem;
+    padding: 4rem 300rem;
     background: linear-gradient(180deg, #daddea 0%, #eeeff4 110.53%);
+
+    @media (min-width: $breakpoint-desktop) {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
 
     h2 {
         text-align: center;
@@ -93,7 +98,6 @@
     .swiper-slide {
         padding: 3rem;
         pointer-events: none;
-        opacity: 0;
         background: linear-gradient(153.11deg, #f1f2f6 -6.51%, #ffffff 121.86%);
         box-shadow: -2px -4px 7px rgba(251, 252, 255, 0.7), 4px 4px 5px rgba(187, 191, 205, 0.7);
         border-radius: 12px;
@@ -102,12 +106,16 @@
         transition-timing-function: ease-in-out;
 
         @media (min-width: $breakpoint-desktop) {
+            opacity: 0;
             padding: 4rem 9rem;
         }
 
         &-active {
             pointer-events: all;
-            opacity: 1;
+
+            @media (min-width: $breakpoint-desktop) {
+                opacity: 1;
+            }
         }
     }
 
