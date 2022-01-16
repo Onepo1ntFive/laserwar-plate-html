@@ -1,15 +1,15 @@
 .gallery {
     background-color: $color-white;
     margin: 0 -300rem;
-    padding: 5rem 300rem;
+    padding: 5rem 300rem 7rem;
 
     @media (min-width: $breakpoint-tablet) {
         padding-top: 10rem;
-        padding-bottom: 10rem;
+        padding-bottom: 8rem;
     }
     @media (min-width: $breakpoint-desktop) {
         padding-top: 14rem;
-        padding-bottom: 14rem;
+        padding-bottom: 12rem;
     }
 
     h2 {
@@ -18,7 +18,6 @@
 
     .swiper {
         overflow: visible;
-        margin-bottom: 5rem;
     }
 
     .swiper-horizontal > .swiper-pagination-bullets,

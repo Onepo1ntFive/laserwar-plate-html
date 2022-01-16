@@ -16,6 +16,12 @@
     -webkit-text-size-adjust: 100%;
     background-color: $color-lightgray;
 
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
     h2 {
         margin-bottom: 1em;
         font-family: $font-family-russo;
@@ -33,6 +39,14 @@
         font-weight: 600;
         line-height: 1.1;
         color: $color-dark-gray;
+    }
+    a {
+        color: $color-green;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+    }
+    a:hover {
+        color: $color-black;
     }
 }
 /*----------*/
@@ -80,7 +94,7 @@
         padding-right: 3rem;
         padding-bottom: 3rem;
         width: 100%;
-        
+
         @media (min-width: $breakpoint-desktop) {
             width: calc(100% - 42rem);
 
