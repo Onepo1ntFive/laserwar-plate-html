@@ -13,6 +13,12 @@
         padding-bottom: 14rem;
     }
 
+    h2 {
+        @media (min-width: $breakpoint-desktop) {
+            font-size: 3rem;
+        }
+    }
+
     label {
         padding-bottom: 0.5rem;
         display: block;
@@ -26,11 +32,17 @@
         padding: 1rem;
         display: block;
         width: 100%;
-        border: 0;
+        border: 1px solid $color-lightgray;
         background: $color-white;
         box-shadow: inset 2px 1px 3px rgba(34, 5, 52, 0.33);
         border-radius: 7px;
+        transition: border-color 0.2s ease-in-out;
+
+        &:focus {
+            border-color: $color-green;
+        }
     }
+
     button {
         position: relative;
         z-index: 1;
@@ -101,23 +113,23 @@
         @media (min-width: $breakpoint-tablet) {
             padding-left: 3rem;
             padding-right: 3rem;
-            width: 60%;
+            width: 70%;
         }
         @media (min-width: $breakpoint-desktop) {
             padding-left: 7rem;
             padding-right: 7rem;
-            width: 70%;
+            width: 60%;
         }
     }
     &__pic {
         display: none;
 
         @media (min-width: $breakpoint-tablet) {
-            width: 40%;
+            width: 30%;
             display: block;
         }
         @media (min-width: $breakpoint-desktop) {
-            width: 30%;
+            width: 40%;
         }
 
         img {
@@ -138,6 +150,10 @@
         &--btn {
             padding-top: 1.5rem;
             text-align: center;
+
+            &:last-child {
+                padding-bottom: 1.5rem;
+            }
 
             @media (min-width: $breakpoint-tablet) {
                 text-align: left;

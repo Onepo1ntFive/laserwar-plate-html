@@ -53,7 +53,7 @@
             height: 100%;
             background: url('../img/head-bg.svg') calc(100% + 76rem) calc(50% - 4rem) no-repeat;
         }
-        @media (min-width: $breakpoint-desktop) {
+        @media (min-width: $breakpoint-desktop-extra) {
             background: url('../img/head-bg.svg') calc(100% + 39rem) calc(50% - 4rem) no-repeat,
                 url('../img/head-bg-left.svg') 0 100% no-repeat;
         }
@@ -113,9 +113,15 @@
             &:link,
             &:visited {
                 padding: 1rem 3rem;
+                width: 100%;
                 font-weight: 600;
                 font-size: 1.8rem;
+                text-align: center;
                 color: $color-white;
+
+                @media (min-width: $breakpoint-desktop) {
+                    width: auto;
+                }
             }
             &:hover {
                 &::before {
