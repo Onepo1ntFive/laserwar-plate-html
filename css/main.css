@@ -466,7 +466,7 @@ sup {
     font-size: 22px;
     font-weight: 600;
     line-height: 1.1;
-    color: #828282; }
+    color: #333; }
   .l-wrap a {
     color: #00aa8a;
     text-decoration: none;
@@ -1501,7 +1501,7 @@ button.swiper-pagination-bullet {
         width: 100%;
         height: 100%;
         background: url("../img/head-bg.svg") calc(100% + 760px) calc(50% - 40px) no-repeat; } }
-    @media (min-width: 1200px) {
+    @media (min-width: 1440px) {
       .promo__bg {
         background: url("../img/head-bg.svg") calc(100% + 390px) calc(50% - 40px) no-repeat, url("../img/head-bg-left.svg") 0 100% no-repeat; } }
   .promo__inner {
@@ -1549,9 +1549,14 @@ button.swiper-pagination-bullet {
         transition: opacity 0.2s ease-in-out; }
       .promo__btn a:link, .promo__btn a:visited {
         padding: 10px 30px;
+        width: 100%;
         font-weight: 600;
         font-size: 18px;
+        text-align: center;
         color: #fff; }
+        @media (min-width: 1200px) {
+          .promo__btn a:link, .promo__btn a:visited {
+            width: auto; } }
       .promo__btn a:hover::after {
         opacity: 1; }
 
@@ -1923,6 +1928,9 @@ button.swiper-pagination-bullet {
     .form {
       padding-top: 140px;
       padding-bottom: 140px; } }
+  @media (min-width: 1200px) {
+    .form h2 {
+      font-size: 30px; } }
   .form label {
     padding-bottom: 5px;
     display: block;
@@ -1935,10 +1943,15 @@ button.swiper-pagination-bullet {
     padding: 10px;
     display: block;
     width: 100%;
-    border: 0;
+    border: 1px solid #eeeff4;
     background: #fff;
     box-shadow: inset 2px 1px 3px rgba(34, 5, 52, 0.33);
-    border-radius: 7px; }
+    border-radius: 7px;
+    transition: border-color 0.2s ease-in-out; }
+    .form input[type='text']:focus,
+    .form input[type='tel']:focus,
+    .form input[type='email']:focus {
+      border-color: #00aa8a; }
   .form button {
     position: relative;
     z-index: 1;
@@ -1998,21 +2011,21 @@ button.swiper-pagination-bullet {
       .form__form {
         padding-left: 30px;
         padding-right: 30px;
-        width: 60%; } }
+        width: 70%; } }
     @media (min-width: 1200px) {
       .form__form {
         padding-left: 70px;
         padding-right: 70px;
-        width: 70%; } }
+        width: 60%; } }
   .form__pic {
     display: none; }
     @media (min-width: 768px) {
       .form__pic {
-        width: 40%;
+        width: 30%;
         display: block; } }
     @media (min-width: 1200px) {
       .form__pic {
-        width: 30%; } }
+        width: 40%; } }
     .form__pic img {
       max-width: 100%; }
   .form__item {
@@ -2024,6 +2037,8 @@ button.swiper-pagination-bullet {
     .form__item--btn {
       padding-top: 15px;
       text-align: center; }
+      .form__item--btn:last-child {
+        padding-bottom: 15px; }
       @media (min-width: 768px) {
         .form__item--btn {
           text-align: left; } }
